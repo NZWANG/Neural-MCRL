@@ -1,0 +1,6 @@
+{
+    "data_path": "/root/autodl-tmp/EEG2Vision/Preprocessed_data_250Hz",
+    "img_directory_training": "/root/autodl-tmp/EEG2Vision/Image_set/training_images",
+    "img_directory_test": "/root/autodl-tmp/EEG2Vision/Image_set/test_images",
+    "features_path":"/root/autodl-tmp/EEG2Vision/Features"
+}
