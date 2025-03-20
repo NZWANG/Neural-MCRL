@@ -26,12 +26,10 @@ The raw and preprocessed EEG dataset, the training and test images are available
 You need to create a data folder according to data_config.json. The data path for this project is:
 
 ```json
-{
     "data_path": "/root/autodl-tmp/EEG2Vision/Preprocessed_data_250Hz",
     "img_directory_training": "/root/autodl-tmp/EEG2Vision/Image_set/training_images",
     "img_directory_test": "/root/autodl-tmp/EEG2Vision/Image_set/test_images",
     "features_path":"/root/autodl-tmp/EEG2Vision/Features"
-}
 ```
 
 ## EEG preprocessing
@@ -50,10 +48,8 @@ It is worth mentioning that I used a local model. It is recommended to use a loc
 ## Image semantic description
 The description text of the picture has been placed in the project. The paths are:
 ```json
-{
     "/root/autodl-tmp/EEG2Vision/texts/description_texts",
     "/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts"
-}
 ```
 The difference between them is the prompt.
 You can choose"/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts".
@@ -61,14 +57,13 @@ You can choose"/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts".
 ## Training
 We offer scripts to train the EEG Encoder and validate it during training. Please update your dataset path and run them.
 ```json
-{
-    python EEGToVisual/NeuralMCRL.py
-}
+    "python EEGToVisual/NeuralMCRL.py"
 ```
 
 ## Acknowledge
+**[Disclaimer: Our training framework uses the method provided in this article. Special thanks to Li et al. for their open source contributions. Excellent code logic and completeness.]**(https://arxiv.org/abs/2403.07721)
 1. Song Y, Liu B, Li X, et al. Decoding natural images from eeg for object recognition[J]. arXiv preprint arXiv:2308.13234, 2023.
-2. Li D, Wei C, Li S, et al. Visual decoding and reconstruction via eeg embeddings with guided diffusion[J]. arXiv preprint arXiv:2403.07721, 2024.[Disclaimer: Our training framework uses the method provided in this article. Special thanks to Li et al. for their open source contributions. Excellent code logic and completeness.]
+2. Li D, Wei C, Li S, et al. Visual decoding and reconstruction via eeg embeddings with guided diffusion[J]. arXiv preprint arXiv:2403.07721, 2024.
 4. Gifford A T, Dwivedi K, Roig G, et al. A large and rich EEG dataset for modeling human visual object recognition[J]. NeuroImage, 2022, 264: 119754.
 5. Grootswagers T, Zhou I, Robinson A K, et al. Human EEG recordings for 1,854 concepts presented in rapid serial visual presentation streams[J]. Scientific Data, 2022, 9(1): 3.
 
