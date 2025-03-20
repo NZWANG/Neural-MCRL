@@ -19,20 +19,11 @@
 
 </div>
 
-<img src="Neural-MCRL.png" alt="Neural-MCRL" style="max-width: 100%; height: auto;"/>
-Framework of our proposed method.
-
-
-
-
-<!--  -->
-<img src="NESTA.png" alt="NESTA" style="max-width: 90%; height: auto;"/>  
-
-The Neural Encoder with Spectral-Temporal Adaptation (NESTA).
+<img src="Neural-MCRL.png" alt="Neural-MCRL" style="max-width: 80%; height: auto;"/>
+Overall framework of the Neural-MCRL.
 
 <!-- ## Usage -->
 <h2 style="border-bottom: 1px solid lightgray; margin-bottom: 5px;">Usage</h2>
-
 This repo is the official implementation of Neural-MCRL: Neural Multimodal Contrastive Representation Learning for EEG-based Visual Decoding
 
 
