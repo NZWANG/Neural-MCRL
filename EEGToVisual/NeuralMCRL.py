@@ -34,7 +34,7 @@ import argparse
 from torch import nn
 from torch.optim import AdamW
 import pandas as pd 
-print("import ok!!!")
+print("import ok!")
 
 
 class Config:
@@ -597,8 +597,7 @@ def main_train_loop(sub, current_time, eeg_model, train_dataloader, test_dataloa
     for epoch in range(config.epochs):
         # Train the model
         train_loss, train_accuracy, features_tensor = train_model(sub, eeg_model, train_dataloader, optimizer, device, text_features_train_all, img_features_train_all, config=config)
-        if (epoch +1) % 5 == 0:                    
-            # Get the current time and format it as a string (e.g., '2024-01-17_15-30-00')                  
+        if (epoch +1) % 5 == 0:                                 
             if config.insubject==True:       
                 os.makedirs(f"./models/contrast/{config.encoder_type}/{sub}/{current_time}", exist_ok=True)             
                 file_path = f"./models/contrast/{config.encoder_type}/{sub}/{current_time}/{epoch+1}.pth"
@@ -734,13 +733,12 @@ def main():
     parser.add_argument('--name', type=str, default="lr=3e-4_img_pos_pro_eeg", help='Experiment name')
     parser.add_argument('--lr', type=float, default=3e-4, help='Learning rate')
     parser.add_argument('--epochs', type=int, default=40, help='Number of epochs')
-    parser.add_argument('--batch_size', type=int, default=128, help='Batch size')
+    parser.add_argument('--batch_size', type=int, default=256, help='Batch size')
     parser.add_argument('--logger', type=bool, default=True, help='Enable WandB logging')
     parser.add_argument('--gpu', type=str, default='cuda:0', help='GPU device to use')
     parser.add_argument('--device', type=str, choices=['cpu', 'gpu'], default='gpu', help='Device to run on (cpu or gpu)')    
     parser.add_argument('--insubject', type=bool, default=True, help='In-subject mode or cross-subject mode')
-    parser.add_argument('--encoder_type', type=str, default='NeuralMCRL', help='Encoder type')
-    # parser.add_argument('--subjects', nargs='+', default=['sub-01', 'sub-02', 'sub-03', 'sub-04', 'sub-05', 'sub-06', 'sub-07', 'sub-08', 'sub-09', 'sub-10'], help='List of subject IDs (default: sub-01 to sub-10)')    
+    parser.add_argument('--encoder_type', type=str, default='NeuralMCRL', help='Encoder type') 
     parser.add_argument('--subjects', nargs='+', default=['sub-08'], help='List of subject IDs (default: sub-01 to sub-10)')   
     args = parser.parse_args()
 
