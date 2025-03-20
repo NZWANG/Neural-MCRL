@@ -1,4 +1,4 @@
-<div align="center">
+![image](https://github.com/user-attachments/assets/3f7bba98-f5ee-4d59-9b07-ce9db3596335)<div align="center">
 
 <h1 style="border-bottom: 1px solid lightgray;">Neural-MCRL: Neural Multimodal Contrastive Representation Learning for EEG-based Visual Decoding</h2>
 
@@ -31,6 +31,7 @@ This repo is the official implementation of Neural-MCRL: Neural Multimodal Contr
 <h2 style="border-bottom: 1px solid lightgray; margin-bottom: 5px;">Data availability</h2>
 You can download the relevant THINGS-EEG data set and THINGS-MEG data set at osf.io.
 The raw and preprocessed EEG dataset, the training and test images are available on [osf](https://osf.io/3jk45/).
+You need to create a data folder according to data_config.json. The data path for this project is:
 
 <!-- ## EEG preprocessing -->
 <h2 style="border-bottom: 1px solid lightgray; margin-bottom: 5px;">EEG preprocessing</h2>
