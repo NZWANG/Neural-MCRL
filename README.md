@@ -25,12 +25,23 @@ The raw and preprocessed EEG dataset, the training and test images are available
 
 You need to create a data folder according to data_config.json. The data path for this project is:
 
-```json
-    "data_path": "/root/autodl-tmp/EEG2Vision/Preprocessed_data_250Hz",
-    "img_directory_training": "/root/autodl-tmp/EEG2Vision/Image_set/training_images",
-    "img_directory_test": "/root/autodl-tmp/EEG2Vision/Image_set/test_images",
-    "features_path":"/root/autodl-tmp/EEG2Vision/Features"
 ```
+"data_path": "/root/autodl-tmp/EEG2Vision/Preprocessed_data_250Hz",
+"img_directory_training": "/root/autodl-tmp/EEG2Vision/Image_set/training_images",
+"img_directory_test": "/root/autodl-tmp/EEG2Vision/Image_set/test_images",
+"features_path":"/root/autodl-tmp/EEG2Vision/Features"
+```
+## Environment
+You can also create a new conda environment and install the required dependencies by running
+```
+conda create -n NeuralMCRL python=3.8
+conda activate NeuralMCRL
+pip install -r requirements.txt
+conda info --envs
+pip install wandb
+pip install einops
+```
+
 
 ## EEG preprocessing
 Modify your path and execute the following code to perform the same preprocessing on the raw data as in our experiment:
@@ -47,17 +58,17 @@ It is worth mentioning that I used a local model. It is recommended to use a loc
 
 ## Image semantic description
 The description text of the picture has been placed in the project. The paths are:
-```json
-    "/root/autodl-tmp/EEG2Vision/texts/description_texts",
-    "/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts"
+```
+"/root/autodl-tmp/EEG2Vision/texts/description_texts",
+"/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts"
 ```
 The difference between them is the prompt.
 You can choose"/root/autodl-tmp/EEG2Vision/texts/this_is_a_description_texts".
 
 ## Training
 We offer scripts to train the EEG Encoder and validate it during training. Please update your dataset path and run them.
-```json
-    "python EEGToVisual/NeuralMCRL.py"
+```
+python EEGToVisual/NeuralMCRL.py
 ```
 
 ## Acknowledge
