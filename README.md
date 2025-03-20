@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3f7bba98-f5ee-4d59-9b07-ce9db3596335)<div align="center">
+
 
 <h1 style="border-bottom: 1px solid lightgray;">Neural-MCRL: Neural Multimodal Contrastive Representation Learning for EEG-based Visual Decoding</h2>
 
