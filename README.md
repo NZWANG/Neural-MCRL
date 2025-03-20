@@ -31,16 +31,52 @@ You need to create a data folder according to data_config.json. The data path fo
 "img_directory_test": "/root/autodl-tmp/EEG2Vision/Image_set/test_images",
 "features_path":"/root/autodl-tmp/EEG2Vision/Features"
 ```
-## Environment
-You can also create a new conda environment and install the required dependencies by running
-```
+## Setting Up Your Environment and Dependencies
+
+To ensure a clean and consistent working environment for this project, please follow these steps:
+
+**1. Create and Activate a New Conda Environment**
+
+First, create a dedicated Conda environment specifically for this project. This helps isolate project dependencies and prevents version conflicts with other projects.
+
+```bash
 conda create -n NeuralMCRL python=3.8
+```
+
+Once the environment has been created, activate it using the following command:
+
+```bash
 conda activate NeuralMCRL
+```
+
+**2. Install Required Dependencies**
+
+With the environment activated, install all necessary dependencies using the `requirements.txt` file provided with the project. This file contains a list of all Python packages and their specific versions required for the project to function correctly.
+
+```bash
 pip install -r requirements.txt
+```
+
+**3. Verify Installation**
+
+After the installation process completes, it's advisable to verify that all dependencies have been installed correctly. You can do this by checking the list of installed packages or by attempting to import key modules in a Python shell.
+
+Additionally, you may want to list all Conda environments to ensure the environment was created and activated properly:
+
+```bash
 conda info --envs
+```
+
+**4. Install Additional Packages (If Needed)**
+
+Depending on your specific use case or additional functionalities you might need, you can install extra packages. For example, if you need to integrate withWeights & Biases for experiment tracking or use Einops for tensor operations, you can install them with:
+
+```bash
 pip install wandb
 pip install einops
 ```
+
+By following these steps, you'll have a properly configured environment with all necessary dependencies installed, ensuring the project runs smoothly.
 
 
 ## EEG preprocessing
@@ -79,6 +115,7 @@ python EEGToVisual/NeuralMCRL.py
 5. Grootswagers T, Zhou I, Robinson A K, et al. Human EEG recordings for 1,854 concepts presented in rapid serial visual presentation streams[J]. Scientific Data, 2022, 9(1): 3.
 
 ## Citation
+If you find our work helpful to your research, we would appreciate a citation:
 ```bibtex
 @article{li2024neural,
   title={Neural-MCRL: Neural Multimodal Contrastive Representation Learning for EEG-based Visual Decoding},
